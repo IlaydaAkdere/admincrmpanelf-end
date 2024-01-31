@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+    <title>ADMINPANEL</title>
+    <style>
+        * {
+            Margin: 0;
+            padding: 0;
+        }
+
+        .imglogo {
+            margin: 85px;
+            padding: 30px;
+            width: 250px;
+            height: 70px;
+        }
+
+        .space-between {
+            margin-right: 90px;
+            margin-top: 20px;
+        }
+
+        .search {
+            /* margin-top: 20px; */
+            position: absolute;
+        }
+
+        .search-input {
+            width: 800px;
+            /* flex: 1; */
+            height: 250px;
+            color: #1a1919;
+            margin-top: 120px;
+            cursor: pointer;
+            box-shadow: #d9dadb;
+        }
+
+        .search-icon {
+            position: absolute;
+            margin: 11px;
+            transform: translateY(-50%);
+        }
+
+        .placeholder {
+            color: #0a0a0a
+        }
+
+        form.search {
+            display: inline-flex;
+            padding-top: 20px;
+        }
+
+        .icons {
+            position: relative;
+        }
+
+        form.search input {
+            height: 45px;
+            border: 1px solid #b8b2b2;
+            border-radius: 5px 5px 5px 5px;
+            font-size: 16px;
+            font-weight: 500;
+            box-sizing: border-box;
+            padding: 15px;
+            flex: 1;
+            background-color: #e9e3e3;
+        }
+
+        form.search button {
+            height: 40px;
+            padding: 30px;
+            background: #393a3b;
+            color: #1a1919;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            color: #0a0a0a;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+        }
+
+
+
+        .USER {
+            width: 65px;
+            height: 65px;
+            margin: -120px;
+            display: inline-flex;
+            position: relative;
+            padding: 150px;
+            float: right;
+            margin-top: -42px;
+        }
+
+
+        .calendar {
+            width: 60px;
+            height: 60px;
+            margin: -145px;
+            display: inline-flex;
+            float: right;
+            padding: 150px;
+            margin-top: -49px;
+        }
+
+        .notification {
+            width: 45px;
+            height: 45px;
+            margin: -145px;
+            display: inline-flex;
+            float: right;
+            padding: 150px;
+            margin-top: -42px;
+        }
+
+        .USER {
+            width: 48px;
+            height: 48px;
+            margin: -120px;
+            display: inline-flex;
+            position: relative;
+            padding: 150px;
+            float: right;
+            margin-top: -42px;
+        }
+
+        .lang {
+            width: 40px;
+            height: 40px;
+            margin: -135px;
+            display: inline-flex;
+            float: right;
+            padding: 150px;
+            margin-top: -145px;
+            margin-top: -42px;
+        }
+
+        .super-admin {
+            color: #000;
+            float: right;
+            position: absolute;
+            margin-left: 70px;
+            margin-top: 15px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .color-box {
+            width: 220px !important;
+            height: 42px !important;
+            margin-bottom: 16px;
+            display: block;
+            position: relative;
+            text-align: center;
+            border-radius: 12px;
+            padding: 4px;
+            margin-left: 110px;
+            color: #fff;
+
+        }
+
+        .ANASAYFA {
+            background-color: rgb(87, 155, 243);
+        }
+
+        .Durum-Tanimlama {
+            background-color: #e76565;
+        }
+
+        .Ürün-Tanimlama {
+            background-color: #8d80c7;
+        }
+
+        .Kullanici-olustur {
+            background-color: #bdeb93;
+        }
+
+        .Kullanici-bilgileri {
+            background-color: #8ec1e7;
+        }
+
+        .Müşteri-bigileri {
+            background-color: #99eff1;
+        }
+
+        .Talep-islemleri {
+            background-color: #50b661;
+        }
+
+        .Raporlama {
+            background-color: #ee95b5;
+        }
+
+        .Dosyalar {
+            background-color: rgb(235, 188, 135);
+        }
+
+        .Ticket {
+            background-color: #8ad7eb;
+        }
+
+        .lisansislemleri {
+            background-color: rgb(23, 96, 255);
+        }
+
+        .atitle {
+            font-style: Brown-Regular;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .dtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .kotitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .kbtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .mbtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .tititle {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .lititle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .rtitle {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .dotitle {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ütitle {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tictitle {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .anasayfaicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .durumicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .urunicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+
+        }
+
+        .kullanicioluştur {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .kullanicibilgileri {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+
+        }
+
+        .Müşteri-bilgileri {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .lisansislemleri {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .Talep-islemleri {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .Raporlama {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .Dosyalar {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+
+        }
+
+        .Ticket {
+            width: 25px;
+            height: 25px;
+            margin-top: 6px;
+        }
+
+        .folders {
+            margin-left: 450px;
+            margin-top: -625px;
+            /* margin:4px; */
+            padding: 24px;
+            flex-wrap: wrap;
+        }
+
+        .emkotech {
+            width: 250px;
+            height: 70px;
+            display: block;
+            position: relative;
+            border: solid;
+            border: 2px solid #000;
+            border-radius: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nova {
+            width: 250px;
+            height: 70px;
+            display: block;
+            flex-wrap: wrap;
+            position: relative;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .edu {
+            width: 250px;
+            height: 70px;
+            display: block;
+            position: relative;
+            border: 2px solid black;
+            border-radius: 20px;
+            flex-wrap: wrap;
+        }
+
+        .totem {
+            width: 250px;
+            height: 70px;
+            display: block;
+            flex-wrap: wrap;
+            position: relative;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .kdüz {
+            position: relative;
+            padding: 40px;
+            margin-left: 420px;
+            padding-bottom: 700px;
+            margin-top: -765px;
+        }
+
+        .müstblgr {
+            margin: 5px;
+            padding: 15px;
+            margin-left: 5px;
+            margin-bottom: 4px;
+            margin-top: -60px;
+            font-size: bold;
+            font-size: larger;
+        }
+
+        .mainanasayfa {
+            position: relative;
+            padding: 40px;
+            margin-left: 420px;
+            padding-bottom: 700px;
+            margin-top: -765px;
+        }
+
+        .mainraporlama {
+            position: relative;
+            padding: 40px;
+            margin-left: 420px;
+            padding-bottom: 700px;
+            margin-top: -765px;
+        }
+
+        .container2 {
+            position: relative;
+            padding: 40px;
+            margin-left: 350px;
+            padding-bottom: 700px;
+            margin-top: -800px;
+        }
+
+        .durumtanimlama {
+            position: relative;
+            padding: 40px;
+            margin-left: 400px;
+            padding-bottom: 700px;
+            margin-top: -765px;
+        }
+
+        .box {
+            border: 1px solid #000;
+            position: relative;
+            /* flex: 1; */
+            display: flex;
+            width: 390px;
+            height: 46px;
+            border-radius: 7px;
+            margin-left: 439px;
+            margin-top: -680px;
+        }
+
+        .durumadi {
+            margin: 5px;
+            padding: 10px;
+            margin-left: 15px;
+            margin-bottom: 4px;
+        }
+
+        .kullanici-bilgileri,
+        .müsteridetay,
+        .talep-islemleri,
+        .uruntanmalama,
+        .mainDosyalar,
+        .MÜSTERİBİLGİLERİ,
+        .KULLANİCİOLUSTURMA,
+        .DÖKÜMANLAR {
+            /* position: relative;
+    padding: 40px;
+    margin-left: 450px;
+    padding-bottom: 700px;
+    margin-top: -700px; */
+            position: relative;
+            padding: 40px;
+            margin-left: 420px;
+            padding-bottom: 700px;
+            margin-top: -765px;
+        }
+
+        .item1,
+        .item2,
+        .item3,
+        .item4,
+        .item5,
+        .item6,
+        .item7 {
+            /* justify-content: space-between; */
+            border: 1px solid #000;
+            /* box-sizing:  border-box; */
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            width: 280px;
+            height: 120px;
+            text-align: center;
+            padding: -100px;
+            margin-bottom: -650px;
+            /* flex-direction: column; */
+            border-radius: 25px;
+            color: #fff;
+        }
+
+        .item1 {
+            background-color: rgb(233, 180, 82);
+            top: 400px;
+            left: 470px;
+            position: fixed;
+        }
+
+        .item2 {
+            background-color: rgb(22, 209, 22);
+            top: 550px;
+            left: 470px;
+            position: fixed;
+        }
+
+        .item3 {
+            background-color: rgb(243, 129, 148);
+            position: fixed;
+
+            top: 400px;
+            left: 1150px;
+        }
+
+        .item4 {
+            background-color: rgb(160, 83, 160);
+            margin-left: 435px;
+            top: 400px;
+            left: 386px;
+            position: fixed;
+        }
+
+
+        .item5 {
+            background-color: rgba(54, 54, 255, 0.74);
+            top: 550px;
+            left: 810px;
+            position: fixed;
+        }
+
+        .item6 {
+            background-color: rgb(38, 38, 204);
+            top: 550px;
+            left: 1150px;
+            position: fixed;
+        }
+
+        .table {
+            margin-left: 410px;
+            margin-top: 640px;
+        }
+
+        /* .colorpicker {
+    margin-left: 480px;
+} */
+        .table {
+            border: 2px solid #000;
+            border-radius: 20px;
+        }
+
+        .ıdtanımalamaalani {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .durumaditanimlamaalani {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tanımlamaalanifrenk {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .durumalanifdurumtanimlama {
+            margin: 180px;
+            padding: 60px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .siralamaalanifdurumtanimlama {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .düzenlemealanifdurumtanitimialani {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .item7 {
+            background-color: #50b9a3;
+            top: 750px;
+            left: 470px;
+            position: fixed;
+            margin-top: -40px;
+        }
+
+        .kullaniciolustur {
+            border: 2px solid #000;
+            border-radius: 25px;
+            margin: 500px;
+            padding: 15px;
+            margin-top: -625px;
+            display: block;
+            margin-left: 450px;
+            position: relative;
+
+
+        }
+
+        .divpart2 {
+            border: 2px solid #000;
+        }
+
+
+        .label {
+            display: flex;
+            position: relative;
+            margin-left: 60px;
+        }
+
+        input,
+        select {
+            width: 200px;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 50px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .Adı-soyadı {
+            font-size: 20x;
+            width: 300px;
+            position: relative;
+            margin-left: 300px;
+            margin: 20px;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        .ünvanı {
+            font-size: 20x;
+            width: 300px;
+            position: relative;
+            margin-left: 500px;
+            margin: 20px;
+            margin: 8px;
+            display: inline-block;
+        }
+
+
+        .telefon {
+            font-size: 20x;
+            width: 300px;
+            position: relative;
+            margin-left: 360px;
+            margin: 20px;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        .kurumbilgisi {
+            font-size: 20x;
+            width: 300px;
+            position: absolute;
+            margin-left: 300px;
+            margin: 20px;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        .E-Posta {
+            font-size: 20x;
+            width: 300px;
+            position: relative;
+            margin-left: 300px;
+            margin: 20px;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        .sifre {
+            font-size: 20x;
+            width: 300px;
+            position: relative;
+            margin-left: 300px;
+            margin: 20px;
+            margin: 8px;
+            display: inline-flex;
+        }
+
+        .checkboxes {
+            display: inline-flex;
+            position: relative;
+            margin-left: -30px;
+            padding: 10px;
+            margin: -10px;
+            font-size: large;
+        }
+
+        .Yetkiler {
+            margin-left: 75px;
+        }
+
+        .checkboxsa {
+            margin: -10px;
+            margin-left: 7px;
+        }
+
+        .müsteritalepolustur {
+            background-color: rgb(13, 134, 13);
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .müsteritalepisicon {
+            background-color: rgb(224, 139, 224);
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .müsteriurunlerimicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .kullanıcıbilgilerititle {
+            position: relative;
+            padding: 40px;
+            margin-left: 420px;
+            padding-bottom: 700px;
+            margin-top: -700px;
+        }
+
+        .moderatörveyöneticiareas {
+            position: relative;
+            display: flex;
+
+        }
+
+        .yöneticiler {
+            border: 2px solid #000;
+            border-radius: 25px;
+            width: 530px;
+            margin: 450px;
+            padding: 10px;
+            margin-top: -655px;
+            display: inline-block;
+            margin-left: 450px;
+            position: absolute;
+        }
+
+        .Moderatörler {
+            border: 2px solid #000;
+            border-radius: 25px;
+            width: 530px;
+            margin: 500px;
+            padding: 10px;
+            margin-top: -345px;
+            display: inline-block;
+            margin-left: 450px;
+            position: absolute;
+        }
+
+        .Yöneticilerbaslık {
+            position: relative;
+            padding: 25px;
+            margin-left: 420px;
+            padding-bottom: 700px;
+            margin-top: -725px;
+            font-size: larger;
+        }
+
+        .Moderatörlerbaslık {
+            position: relative;
+            padding: 25px;
+            margin: 4px;
+            margin-left: 420px;
+            padding-bottom: 600px;
+            margin-top: -430px;
+            font-size: larger;
+        }
+
+        .coloria {
+            color: red;
+            font-size: bold;
+        }
+
+        .düzenle {
+            margin: 4px;
+            padding: 2px;
+            margin-left: 55px;
+        }
+
+        .sil {
+            margin: 4px;
+            padding: 2px;
+        }
+
+        .ilaydayönelmoderatörfield {
+            margin: 4px;
+            margin-left: 25px;
+        }
+
+        .ilaydayöenticifield {
+            margin: 4px;
+            margin-left: 25px;
+        }
+
+        .girisekranicon {
+            position: absolute;
+            display: inline-block;
+            margin: auto;
+            padding: auto;
+
+        }
+
+        /* .girişyap {
+    text-align: center;
+} 
+
+.epostagirisi {
+    border: 1px solid #000;
+    border-radius: 15x;
+    position: relative;
+    display: block;
+    margin-left: 1170px;
+    margin: 20px;
+    padding: 10px;
+    width: 290px;
+    margin-top: 250px;
+}
+
+.sifregirisi {
+    border: 1px solid #000;
+    border-radius: 15px;
+    position: relative;
+    display: block;
+    margin-left: 1170px;
+    margin: 20px;
+    padding: 10px;
+    width: 290px;
+    margin-top: 250px;
+} */
+
+        .E-Posta1 {
+            margin: 7px;
+            padding: 5px;
+            position: relative;
+            margin-left: 987px;
+            margin-top: 400px;
+            width: 350px;
+
+        }
+
+        .sifre1 {
+            margin: 7px;
+            padding: 5px;
+            position: relative;
+            margin-left: 1000px;
+            margin-top: 20px;
+            width: 350px;
+
+        }
+
+        .E-Postaty {
+            font-size: 20x;
+            font-family: 'Courier New', Courier, monospace;
+            width: 300px;
+            position: relative;
+            margin-left: 300px;
+            margin: 20px;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        .sifrety {
+            font-size: 20x;
+            font-family: 'Courier New', Courier, monospace;
+            width: 300px;
+            position: relative;
+            margin-right: -300px;
+            margin: 30px;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        /* 
+.gir1 {
+    margin-left: 1000px;
+  margin-top:20px;
+  padding:90px;
+}
+
+.gir2 {
+    margin-left: 1000px;
+ margin-bottom:400px;
+ padding:-280px;
+}
+.form1{
+    margin-top:20px;
+}
+.form2{
+    margin-bottom:100px;
+} */
+        #customCheckbox {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+            margin: 0;
+        }
+
+        label {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            border: 1px solid #eeeeee;
+            background-color: #d7d8da;
+            border-radius: 15px;
+            transition: background 0.3s linear;
+            cursor: pointer;
+        }
+
+        label:after {
+            content: "";
+            position: relative;
+            left: 1px;
+            top: 1px;
+            width: 28px;
+            height: 28px;
+            border-radius: 15px;
+            background-color: #ffffff;
+            transition: left 0.3s ease-out;
+        }
+
+
+        /* Shirli iksir burada! */
+        #customCheckbox:checked~label {
+            background-color: #42d77d;
+        }
+
+        #customCheckbox:checked~label:after {
+            left: 91px;
+        }
+
+        .ıdtanımalamaalaniürün {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .durumaditanimlamaalaniürünadı {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .ürünadı {
+            margin: 5px;
+            padding: 10px;
+            margin-left: 5px;
+            margin-bottom: 4px;
+            border: 1px solid black;
+            border-radius: 7px;
+            width: 420px;
+            height: 25px;
+            margin-top: 45px;
+        }
+
+        .tanımlamaalaniürüntürü {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .durumalanifdurumtanimlama {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .düzenlemealanifdurumtanitimialani {
+            margin: 100px;
+            padding: 25px;
+            font-size: large;
+        }
+
+        .dosyadı {
+            margin: -10px;
+            padding: 5px;
+            margin-left: 65px;
+            margin-bottom: 4px;
+            margin-top: 10px;
+        }
+
+        .ürüntürü {
+            margin: 5px;
+            padding: 10px;
+            margin-left: 15px;
+            margin-bottom: 4px;
+        }
+
+        .box1 {
+            position: relative;
+            /* flex: 1; */
+            display: flex;
+            width: 400px;
+            height: 46px;
+            margin-left: 445px;
+            margin-top: -675px;
+            /* margin: 10px; */
+            /* padding: 2px; */
+
+        }
+
+        .durumw {
+            border: 2px solid #000;
+            border-radius: 10px;
+            width: 380px;
+            height: 40px;
+            margin-left: -145px;
+            margin-top: 60px;
+            /* padding:5px; */
+        }
+
+        .box2 {
+            border: 1px solid #000;
+            position: relative;
+            display: inline-block;
+            width: 390px;
+            height: 46px;
+            border-radius: 7px;
+            margin-left: 875px;
+        }
+
+        .talepislemleri {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            position: relative;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 545px;
+            margin-left: -20px;
+        }
+
+        .TALEPİSLEMLERİTYTLE {
+            margin: 5px;
+            padding: 10px;
+            margin-left: 15px;
+            margin-bottom: 4px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .talepno {
+            margin: 150px;
+            padding: 40px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .müsteriid {
+            margin: 150px;
+            padding: 50px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .müsteriadii {
+            margin: 150px;
+            padding: 50px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .şafak {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .Diltaş {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .Akademi {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tekniközellik {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .note3Lisans {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ieltisimm {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ilyd1,
+        .ilyd2,
+        .ilyd3 {
+            margin: 10px;
+            padding: 5px;
+            font-size: medium;
+        }
+
+        .Ayrıntılar {
+            margin: 10px;
+            padding: 5px;
+            font-size: medium;
+        }
+
+        .ÜrünGörselleri {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .validdate {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .Bahçelievler,
+        .Selçuklu,
+        .Bornova {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .İzmir,
+        .İstanbul,
+        .Konya {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .ill {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .no1,
+        .no2,
+        .no3 {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .Emkosmartloock {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .kullanıcıklavuzu {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .talepedenkurum {
+            margin: 15px;
+            padding: 10px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .talepkonusu {
+            margin: 10px;
+            padding: 10px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .talepadedi {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .bes,
+        .birs,
+        .üc {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .tarih1,
+        .tarih2,
+        .tarih3 {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .durumson {
+            margin: 5px;
+            padding: 5px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .onaylanacak,
+        .iptallenecek {
+            margin: 4px;
+            padding: 4px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .onaylanmıstır {
+            margin: 4px;
+            padding: 4px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mod1,
+        .mod2,
+        .mod3 {
+            margin: 5px;
+            padding: 5px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .dökümanlar {
+            position: relative;
+            padding: 40px;
+            margin-left: 400px;
+            padding-bottom: 700px;
+            margin-top: -765px;
+        }
+
+        .yeniekle {
+            display: flex;
+            position: relative;
+            margin-left: 130px;
+            border: 2px solid black;
+            border-radius: 1px solid #000;
+            border-radius: 10px;
+            width: 60px;
+            height: 7px;
+            margin-bottom: 15px;
+            margin: 3px;
+            padding: 15px;
+            margin-left: -250px;
+            font-size: bold;
+            font-size: large;
+            background-color: #e2dcdc;
+
+        }
+
+        .KB {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .MB {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        .KB2 {
+            margin: 15px;
+            padding: 15px;
+            font-size: medium;
+        }
+
+        /* .Dosyaadıbuton {
+    display: flex;
+    position: relative;
+    margin-left: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 160px;
+    height: 16px;
+    margin-bottom: 4px;
+    margin: 5px;
+    padding: 11px;
+    margin-left: -250px;
+    font-size: bold;
+    font-size: large;
+}
+
+.dosyaaaaa {
+    margin-left: -100px;
+    font-size: bold;
+    font-size: large;
+} */
+
+        .yeniii {
+            margin-left: -410px;
+            margin-top: 40px;
+            font-size: bold;
+            font-size: large;
+            padding: 20px;
+            border-radius: 1px solid #000;
+        }
+
+
+        .da {
+            display: flex;
+            position: relative;
+            text-align: center;
+            margin: 10px;
+        }
+
+        /* ----------------------- */
+
+        .dropbtn {
+            background-color: #e2dcdc;
+            color: rgb(0, 0, 0);
+            padding: 16px;
+            border: 2px solid black;
+            font-size: 16px;
+            border: none;
+            margin-left: -335px;
+        }
+
+        .dropdown {
+            position: absolute;
+            display: block;
+            margin: 125px;
+            padding: 20px;
+            margin-left: 40px;
+            margin-top: 40px;
+            border-radius: 1px solid #000;
+            border-radius: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: #f1f1f1;
+            min-width: 160px;
+
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            margin-left: -335px;
+            width: 20px;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .yeniicon {
+            width: 20px;
+            height: 17px;
+            margin-bottom: 5px;
+            padding-bottom: 4px;
+        }
+
+        .emkotchemkologo2 {
+            /* margin: 75px;
+    padding: 80px;
+    width: 250px;
+    height: 70px;
+    margin-left:280px;
+    margin-top:-900px; */
+            position: relative;
+            width: 250px;
+            height: 70px;
+            padding: 40px;
+            margin-left: 290px;
+            padding-bottom: 700px;
+            margin-top: -765px;
+        }
+
+        .Durum-Tanimlamato {
+            background-color: green;
+        }
+
+        .emkotechlogolarıemkotechdosyası {
+            display: flex;
+            margin-left: 290px;
+            position: relative;
+
+        }
+
+        .opsveaıo {
+            display: flex;
+            margin-left: 290px;
+            position: relative;
+        }
+
+        .ops1 {
+            margin: 20px;
+            padding: 20px;
+            width: 370px;
+            height: 190px;
+            margin-top: -450px;
+        }
+
+        .AİO2 {
+            margin: 5px;
+            padding: 18px;
+            width: 320px;
+            height: 220px;
+            margin-top: -450px;
+        }
+
+        .nova-sdosya {
+            margin: 20px;
+            padding: 20px;
+            width: 280px;
+            height: 150px;
+            margin-top: -650px;
+
+        }
+
+        .AİO {
+            margin: 20px;
+            padding: 20px;
+            width: 280px;
+            height: 150px;
+            margin-top: -650px;
+        }
+
+        .nova-s3 {
+            margin: 20px;
+            padding: 20px;
+            width: 280px;
+            height: 150px;
+            margin-top: -650px;
+        }
+
+        .goplus {
+            margin: 20px;
+            padding: 20px;
+            width: 280px;
+            height: 150px;
+            margin-top: -650px;
+        }
+
+        .AIOTOTEM {
+            margin: 20px;
+            padding: 20px;
+            width: 400px;
+            height: 210px;
+            margin-top: -650px;
+            margin-left: -80px;
+        }
+
+        .TBLETEDUTOTEM {
+            margin: 20px;
+            padding: 20px;
+            width: 390px;
+            height: 155px;
+            margin-top: -650px;
+        }
+
+        .ops {
+            margin: 20px;
+            padding: 20px;
+            width: 340px;
+            height: 150px;
+            margin-top: -650px;
+        }
+
+        .kayıtsilme {
+            border: 1px solid #000;
+            border-radius: 25px;
+            width: 550px;
+            height: 200px;
+            position: relative;
+            display: ruby-base;
+            margin: 50px;
+            padding: 50px;
+            margin-left: 600px;
+            margin-top: 340px;
+            background-color: #fff;
+        }
+
+        .ib {
+            margin: 15px;
+            padding: 10px;
+            margin-left: 185px;
+            display: ruby-base;
+            margin-top: 30px;
+        }
+
+        .emn {
+            margin: 15px;
+            padding: 10px;
+            margin-left: 185px;
+            display: ruby-base;
+            margin-top: 30px;
+        }
+
+        .slmeislmibsrlı {
+            margin: 15px;
+            padding: 10px;
+            margin-left: -6px;
+            margin-top: -30px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger;
+        }
+
+        .butontokydt {
+            width: 107px;
+            height: 2px;
+            font-size: larger;
+            margin-left: 220px;
+            margin-top: 3px;
+            /* margin:5px; */
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            display: ruby-base;
+        }
+
+        .btnptli {
+            width: 107px;
+            height: 2px;
+            font-size: larger;
+            margin-left: 220px;
+            margin-top: 3px;
+            /* margin:5px; */
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            display: ruby-base;
+        }
+
+        .btniptal {
+            width: 107px;
+            height: 2px;
+            font-size: larger;
+            margin-left: 220px;
+            margin-top: 3px;
+            /* margin:5px; */
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            display: ruby-base;
+        }
+
+        .tmmprperty {
+            font-size: larger;
+            text-align: center;
+            margin: -35px;
+            padding: -15px;
+            /* font-size: bold; */
+            position: relative;
+            display: ruby-base;
+            margin-top: -200px;
+        }
+
+        .iptalbtn {
+            font-size: larger;
+            text-align: center;
+            /* margin: -35px; */
+            padding: -15px;
+            /* font-size: bold; */
+            position: relative;
+            display: ruby-base;
+            margin-top: -200px;
+        }
+
+        .circle-check {
+            margin-top: -160px;
+            margin-left: 210px;
+            display: ruby-base;
+        }
+
+        .iptalyazi {
+            font-size: larger;
+            text-align: center;
+            margin: -35px;
+            padding: -15px;
+            /* font-size: bold; */
+            position: relative;
+            display: ruby-base;
+            margin-top: -200px;
+        }
+
+        .em {
+            font-size: larger;
+            text-align: center;
+            margin: -35px;
+            padding: -15px;
+            /* font-size: bold; */
+            position: relative;
+            display: ruby-base;
+            margin-top: -200px;
+        }
+
+        .güncelle {
+            position: relative;
+            display: flex;
+            font-size: larger;
+            text-align: center;
+            margin-left: 30px;
+            height: 4px;
+            padding: 20px;
+            margin: 15px;
+            margin-bottom: 3px;
+        }
+
+        .talepnum {
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            margin: 10px;
+            padding: 10px;
+            margin-left: 440px;
+            width: 140px;
+            height: 20px;
+            margin-top: -660px;
+            background: rgb(206, 205, 205);
+        }
+
+        .exceleaktar {
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            margin: 10px;
+            padding: 10px;
+            margin-left: 1000px;
+            width: 180px;
+            height: 40px;
+            margin-top: -50px;
+        }
+
+        .tlpnoo {
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: flex;
+            position: fixed;
+            margin: 10px;
+            padding: 10px;
+            margin-left: 620px;
+            width: 350px;
+            height: 20px;
+            margin-top: -40px;
+        }
+
+        .eaktar {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 2px;
+            padding: -10px;
+            margin-left: 9px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: -2px;
+        }
+
+        .tno {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 2px;
+            padding: -10px;
+            margin-left: 25px;
+        }
+
+        .tn {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 2px;
+            padding: -10px;
+            margin-left: 25px;
+        }
+
+        .exkn {
+            width: 25px;
+            height: 25px;
+            margin-top: -3px;
+        }
+
+        .srcıcons {
+            margin: 2px;
+            padding: -10px;
+            margin-left: 245px;
+        }
+
+        .aktif {
+            background-color: green;
+            border: 1px solid;
+            border-radius: 5px;
+            width: 120px;
+            height: 20px;
+            color: #fff;
+        }
+
+        .pasif1,
+        .pasif2 {
+            background-color: red;
+            border: 1px solid;
+            border-radius: 5px;
+            width: 120px;
+            height: 20px;
+            color: #fff;
+            margin-top: -30px;
+        }
+
+        .dot {
+            height: 1px;
+            margin-top: -10px;
+            margin: -7px;
+            padding: -5px;
+        }
+
+        .tbyt {
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            margin: 10px;
+            padding: 10px;
+            margin-left: 640px;
+            width: 300px;
+            height: 20px;
+            margin-top: -50px;
+        }
+
+        .sicn {
+            margin-left: 275px;
+        }
+
+        .tnhshsh {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            position: absolute;
+            margin-top: -1px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <img src="emkotechlogo.png" class="imglogo" width="200" height="100" alt="Web Sitesi Logosu" />
+
+        <form action="" method="get" class="search">
+            <input type="text" class="search-input" id="searchInput" placeholder="Ara...">
+            <!-- <div class="search-icon" onclick="search()">
+                <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" alt="Search Icon">
+            </div> -->
+
+            <div class="space-between"></div>
+            <!-- <button type="button">
+        <i class="fa-solid fa-magnifying-glass"></i></button> -->
+            <div class="icons">
+                <div class="lang">
+                    <img src="langicon.png" alt="">
+                    <!-- <img src="langicon.png"> -->
+
+                </div>
+                <div class="notification">
+                    <img src="notification.png">
+                </div>
+                <div class="calendar">
+                    <img src="calendar.png">
+                </div>
+            </div>
+            <div class="USER">
+                <span class="super-admin">İlayda Yönel</span>
+                <img src="user.png">
+            </div>
+        </form>
+        <div class="icons">
+            <div class="color-box ANASAYFA">
+                <img src="Anasayfa.png" class="anasayfaicon">
+                <span class="atitle">Anasayfa</span>
+            </div>
+            <div class="color-box Durum-Tanimlama">
+                <img src="Durum Tanımla.png" class="durumicon">
+                <span class="dtitle">Durum Tanımlama</span>
+            </div>
+            <div class="color-box Ürün-Tanimlama">
+                <img src="Ürün Tanımlama.png" class="urunicon">
+                <span class="ütitle">Ürün Tanımlama</span>
+            </div>
+            <div class="color-box Kullanici-olustur">
+                <img src="Kullanıcı Bilgileri.png" class="kullanicioluştur">
+                <span class="kotitle">Kullanıcı Oluştur</span>
+            </div>
+            <div class="color-box Kullanici-bilgileri">
+                <img src="Kullanıcı Bilgileri.png" class="kullanicibilgileri">
+                <span class="kbtitle"> Kullanıcı Bilgileri</span>
+            </div>
+            <div class="color-box Müşteri-bigileri">
+                <img src="Müşteri Bilgileri.png" class="Müşteri-bilgileri">
+                <span class="mbtitle">Müşteri Bilgileri</span>
+            </div>
+            <div class="color-box Talep-islemleri">
+                <img src="Talep İşlemleri.png" class="Talep-islemleri">
+                <span class="tititle"> Talep İşlemleri</span>
+            </div>
+            <div class="color-box lisansislemleri">
+                <img src="Talep İşlemleri.png" class="lisansislemleri">
+                <span class="tititle"> Lisans İşlemleri</span>
+            </div>
+            <div class="color-box Raporlama">
+                <img src="Raporlama.png" class="Raporlama">
+                <span class="rtitle"> Raporlama</span>
+            </div>
+            <div class="color-box Dosyalar">
+                <img src="Dosyalar.png" class="Dosyalar">
+                <span class="dotitle"> Dosyalar</span>
+            </div>
+            <div class="color-box Ticket">
+                <img src="Ticket.png" class="Ticket">
+                <span class="tictitle"> Ticket</span>
+            </div>
+            <!-- <div class="yuzdeler">
+                <h1 class="mainanasayfa">Anasayfa</h1>
+            </div> -->
+            <div class="talepnum">
+                <span class="tn">Lisans Kodu</span>
+            </div>
+
+            <div class="tbyt">
+                <span class="tnhshsh">Lisans Kodu</span>
+                <img src="searchıcon.png" alt="" class="sicn">
+            </div>
+
+            <!-- <div class="tlpnoo">
+                <span class="tno">Lisans Kodu</span>
+                <img src="" alt="" class="srcıcons">
+            </div> -->
+
+            <button class="exceleaktar">
+                <img src="excelikons222.png" alt="" class="exkn">
+                <span class="eaktar">Excele Aktar</span>
+            </button>
+
+        </div>
+        <div class="box1">
+            <span class="talepislemleri">Bytello Share</span>
+        </div>
+
+
+        <table class="table">
+            <tr>
+                <th class="talepno">Lisans No
+                    <a href=""></a>
+                    <br><br>
+                    <a href="" class="birinci">0001</a>
+                    <br><br>
+                    <a href="" class="ikinci">0002</a>
+                    <br><br>
+                    <a href="" class="üçüncü">0003</a>
+                    <br><br>
+                    <a href=""></a>
+                    <a href=""></a>
+                </th>
+
+                <th class="talepedenkurum">Lisans Adı
+                    <a href=""></a>
+                    <br><br>
+                    <a href="" class="şafak">Bytello Share</a>
+                    <br><br>
+                    <a href="" class="Diltaş">Bytello Share</a>
+                    <br><br>
+                    <a href="" class="Akademi">Bytello Share</a>
+                    <br><br>
+                    <a href=""></a>
+                    <a href=""></a>
+                </th>
+                <br><br>
+                <th class="talepkonusu">Lisans Kodu
+                    <br><br>
+                    <a href="" class="note3Lisans">MJKK7-TBWJ</a>
+                    <br><br>
+                    <a href="" class="bytelloLisans"> CJKK8-4TBWA</a>
+                    <br><br>
+                    <a href="" class="Emkosmartloock">XCZH7-8BTWJ</a>
+                    <br><br><br>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </th>
+                <th class="düzenlemealanifdurumtanitimialani">Durum
+                    <br><br>
+                    <p class="aktif">Aktif</p>
+                    <br><br>
+                    <p class="pasif1">Pasif</p>
+                    <br><br>
+                    <p class="pasif2">Pasif</p>
+                    <br><br>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </th>
+                <th class="düzenlemealanifdurumtanitimialani">Kullanım
+                    <br><br>
+                    <a href="" class="mod1">Özel Bahçelievler Şafak Okulları</a>
+                    <br><br>
+                    <a href="" class="mod2">Boşta</a>
+                    <br><br>
+                    <a href="" class="mod3">Boşta</a>
+                    <br><br>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </th>
+                <th class="düzenlemealanifdurumtanitimialani">
+                    <br>
+                    <p class="dot">
+                        <img src="dots1.png" alt="">
+                    </p>
+                    <br><br> <br>
+                    <p class="dot"></p>
+                    <img src="dots1.png" alt="">
+                    <br><br>
+                    <p class="dot"></p>
+                    <img src="dots1.png" alt="">
+                    <br><br>
+                    <p class="dot"></p>
+                    <img src="dots1.png" alt="">
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </th>
+            </tr>
+        </table>
+
+
+
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />  -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+
+        <!-- <input type="color" id="colorPicker" name="picker" value="#f6b73c"> -->
+
+</body>
+
+</html>

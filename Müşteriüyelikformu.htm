@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+    <title>Üye Ol</title>
+    <style>
+        * {
+            Margin: 0;
+            padding: 0;
+        }
+
+
+
+        .imglogo {
+            margin: -115px;
+            padding: 50px;
+            width: 450px;
+            height: 120px;
+            margin-left: 635px;
+            margin-top: 10px;
+        }
+
+        .space-between {
+            margin-right: 90px;
+            margin-top: 20px;
+        }
+
+        .search {
+            /* margin-top: 20px; */
+            position: absolute;
+        }
+
+        .search-input {
+            width: 800px;
+            /* flex: 1; */
+            height: 250px;
+            color: #1a1919;
+            margin-top: 120px;
+            cursor: pointer;
+            box-shadow: #d9dadb;
+        }
+
+        .search-icon {
+            position: absolute;
+            margin: 11px;
+            transform: translateY(-50%);
+        }
+
+        .placeholder {
+            color: #0a0a0a
+        }
+
+        form.search {
+            display: inline-flex;
+            padding-top: 20px;
+        }
+
+        .icons {
+            position: relative;
+        }
+
+        form.search input {
+            height: 45px;
+            border: 1px solid #b8b2b2;
+            border-radius: 5px 5px 5px 5px;
+            font-size: 16px;
+            font-weight: 500;
+            box-sizing: border-box;
+            padding: 15px;
+            flex: 1;
+            background-color: #e9e3e3;
+        }
+
+        form.search button {
+            height: 40px;
+            padding: 30px;
+            background: #393a3b;
+            color: #1a1919;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            color: #0a0a0a;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+        }
+
+        .calendar {
+            width: 65px;
+            height: 65px;
+            margin: -145px;
+            display: inline-flex;
+            float: right;
+            padding: 150px;
+            margin-top: -42px;
+        }
+
+        .notification {
+            width: 65px;
+            height: 65px;
+            margin: -145px;
+            display: inline-flex;
+            float: right;
+            padding: 150px;
+            margin-top: -42px;
+        }
+
+        .USER {
+            width: 65px;
+            height: 65px;
+            margin: -120px;
+            display: inline-flex;
+            position: relative;
+            padding: 150px;
+            float: right;
+            margin-top: -42px;
+        }
+
+        .lang {
+            width: 60px;
+            height: 60px;
+            margin: -135px;
+            display: inline-flex;
+            float: right;
+            padding: 150px;
+            margin-top: -145px;
+            margin-top: -42px;
+        }
+
+        .super-admin {
+            color: #000;
+            float: right;
+            position: absolute;
+            margin-left: 70px;
+            margin-top: 20px;
+            font-size: large;
+            font-style: mono-upper;
+
+        }
+
+        .color-box {
+            width: 220px !important;
+            height: 42px !important;
+            margin-bottom: 16px;
+            display: block;
+            position: relative;
+            text-align: center;
+            border-radius: 12px;
+            padding: 4px;
+            margin-left: 110px;
+            color: #fff;
+
+        }
+
+        .ANASAYFA {
+            background-color: rgb(87, 155, 243);
+        }
+
+        .Durum-Tanimlama {
+            background-color: #e76565;
+        }
+
+        .Ürün-Tanimlama {
+            background-color: #8d80c7;
+        }
+
+        .Kullanici-olustur {
+            background-color: #bdeb93;
+        }
+
+        .Kullanici-bilgileri {
+            background-color: #8ec1e7;
+        }
+
+        .Müşteri-bigileri {
+            background-color: #99eff1;
+        }
+
+        .Talep-islemleri {
+            background-color: #50b661;
+        }
+
+        .Raporlama {
+            background-color: #ee95b5;
+        }
+
+        .Dosyalar {
+            background-color: rgb(235, 188, 135);
+        }
+
+        .Ticket {
+            background-color: #8ad7eb;
+        }
+
+        .atitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .dtitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .kotitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .kbtitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .mbtitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .tititle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .rtitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .dotitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .ütitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .tictitle {
+            font-style: italic;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .anasayfaicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .durumicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .urunicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+
+        }
+
+        .kullanicioluştur {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .kullanicibilgileri {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+
+        }
+
+        .Müşteri-bilgileri {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .Talep-islemleri {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .Raporlama {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .Dosyalar {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+
+        }
+
+        .Ticket {
+            width: 25px;
+            height: 25px;
+            margin-top: 6px;
+        }
+
+        .folders {
+            margin-left: 450px;
+            margin-top: -625px;
+            /* margin:4px; */
+            padding: 24px;
+            flex-wrap: wrap;
+        }
+
+        .emkotech {
+            width: 250px;
+            height: 70px;
+            display: block;
+            position: relative;
+            border: solid;
+            border: 1px solid #000;
+            border-radius: 20px;
+            flex-wrap: wrap;
+        }
+
+        .edu {
+            width: 250px;
+            height: 70px;
+            display: block;
+            position: relative;
+            border: 1px solid black;
+            border-radius: 20px;
+            flex-wrap: wrap;
+        }
+
+        .totem {
+            width: 250px;
+            height: 70px;
+            display: block;
+            flex-wrap: wrap;
+            position: relative;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+
+        .mainanasayfa {
+            position: relative;
+            padding: 40px;
+            margin-left: 420px;
+            padding-bottom: 700px;
+            margin-top: -700px;
+        }
+
+        .mainraporlama {
+            position: relative;
+            padding: 40px;
+            margin-left: 450px;
+            padding-bottom: 700px;
+            margin-top: -700px;
+        }
+
+        .container2 {
+            position: relative;
+            padding: 40px;
+            margin-left: 350px;
+            padding-bottom: 700px;
+            margin-top: -800px;
+        }
+
+        .durumtanimlama {
+            position: relative;
+            padding: 40px;
+            margin-left: 400px;
+            padding-bottom: 700px;
+            margin-top: -700px;
+        }
+
+        .box {
+            border: 1px solid #000;
+            position: relative;
+            /* flex: 1; */
+            display: flex;
+            width: 390px;
+            height: 46px;
+            border-radius: 7px;
+            margin-left: 439px;
+            margin-top: -680px;
+        }
+
+        .durumadi {
+            margin: 5px;
+            padding: 10px;
+            margin-left: 15px;
+            margin-bottom: 4px;
+        }
+
+        .kullanici-bilgileri,
+        .müsteridetay,
+        .talep-islemleri,
+        .uruntanmalama,
+        .mainDosyalar,
+        .MÜSTERİBİLGİLERİ,
+        .KULLANİCİOLUSTURMA,
+        .DÖKÜMANLAR {
+            position: relative;
+            padding: 40px;
+            margin-left: 350px;
+            padding-bottom: 700px;
+            margin-top: -700px;
+        }
+
+        .item1,
+        .item2,
+        .item3,
+        .item4,
+        .item5,
+        .item6 {
+            /* justify-content: space-between; */
+            border: 1px solid #000;
+            /* box-sizing:  border-box; */
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            width: 280px;
+            height: 120px;
+            text-align: center;
+            padding: -100px;
+            margin-bottom: -650px;
+            /* flex-direction: column; */
+            border-radius: 25px;
+            color: #fff;
+        }
+
+        .item1 {
+            background-color: rgb(233, 180, 82);
+            top: 400px;
+            left: 470px;
+            position: fixed;
+        }
+
+        .item2 {
+            background-color: rgb(22, 209, 22);
+            top: 550px;
+            left: 470px;
+            position: fixed;
+        }
+
+        .item3 {
+            background-color: rgb(243, 129, 148);
+            position: fixed;
+
+            top: 400px;
+            left: 1150px;
+        }
+
+        .item4 {
+            background-color: rgb(160, 83, 160);
+            margin-left: 435px;
+            top: 400px;
+            left: 386px;
+            position: fixed;
+        }
+
+        .item5 {
+            background-color: rgba(54, 54, 255, 0.74);
+            top: 550px;
+            left: 810px;
+            position: fixed;
+        }
+
+        .item6 {
+            background-color: rgb(38, 38, 204);
+            top: 550px;
+            left: 1150px;
+            position: fixed;
+        }
+
+        .table {
+            margin-left: 550px;
+            margin-top: 40px;
+        }
+
+        /* .colorpicker {
+    margin-left: 480px;
+} */
+        .table {
+            border: 2px solid #000;
+            border-radius: 20px;
+        }
+
+        .ıdtanımalamaalani {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .durumaditanimlamaalani {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .tanımlamaalanifrenk {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .durumalanifdurumtanimlama {
+            margin: 180px;
+            padding: 60px;
+            font-size: large;
+        }
+
+        .siralamaalanifdurumtanimlama {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .düzenlemealanifdurumtanitimialani {
+            margin: 150px;
+            padding: 50px;
+            font-size: large;
+        }
+
+        .müsteriitem1,
+        .müsteriitem2,
+        .müsteriitem3 {
+            /* justify-content: space-between; */
+            border: 1px solid #000;
+            /* box-sizing:  border-box; */
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            width: 280px;
+            height: 120px;
+            text-align: center;
+            padding: -100px;
+            margin-bottom: -650px;
+            /* flex-direction: column; */
+            border-radius: 25px;
+            color: #fff;
+        }
+
+        .müsteriitem1 {
+            background-color: rgb(160, 83, 160);
+            top: 400px;
+            left: 470px;
+            position: fixed;
+        }
+
+        .müsteriitem2 {
+            background-color: rgba(54, 54, 255, 0.74);
+            position: fixed;
+            top: 400px;
+            left: 1150px;
+        }
+
+        .müsteriitem3 {
+            background-color: rgb(38, 38, 204);
+            margin-left: 435px;
+            top: 400px;
+            left: 386px;
+            position: fixed;
+        }
+
+        /* .müsterianasayfaicon,
+.müsteritalepolustur,
+.müsteritalepisicon,
+.müsteriurunlerimicon {
+    position: relative;
+    padding: 40px;
+    margin-left: 350px;
+    padding-bottom: 700px;
+    margin-top: -700px;
+} */
+
+        /* .müstericon {
+    position: absolute;
+    padding: 40px;
+    margin-left: 350px;
+    padding-bottom: 700px;
+    margin-top: -700px;
+} */
+
+        .müsterianasayfaicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .müsteritalepolustur {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .müsteritalepisicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .müsteriurunlerimicon {
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .uyeOlForm {
+            position: absolute;
+            width: 475px;
+        }
+
+        .uyeoltıtle {
+            position: relative;
+            margin-top: 55px;
+            margin-left: 750px;
+            padding: 10px;
+        }
+
+        .bordertologinpage {
+            margin-left: 250px;
+            border-radius: 25px;
+            justify-content: space-between;
+            margin-top: 20px;
+            border-left: 90px;
+
+            /* margin: 20px 10px -10px 20px; */
+
+        }
+
+        .divpart2 {
+            margin-top: -10px;
+            margin-left: 890px;
+            position: relative;
+            width: 475px;
+            display: block;
+            border: none;
+            position: relative;
+        }
+
+        .ilçe {
+            position: relative;
+            height: 40px;
+        }
+
+        .Onay-Kodu {
+            margin-top: 20px;
+            padding: 10px;
+            margin-left: -370px;
+            text-align: center;
+        }
+
+        .full {
+            /* border: 1px solid #000; */
+            position: relative;
+
+        }
+
+        .Onay-Kodu {
+            position: relative;
+            margin-left: -300px;
+            margin-top: 3px;
+            border-radius: 7px;
+        }
+
+        .üyeol {
+            margin-top: 14px;
+            margin-left: -298px;
+            width: 473px;
+            margin-bottom: 20px;
+            ;
+        }
+
+        .telefon {
+            border-radius: 7px;
+            width: 465px;
+            margin-left: -1px;
+        }
+
+        .unvan {
+            border-radius: 7px;
+            width: 465px;
+        }
+
+        .adi-soyadı {
+            border-radius: 7px;
+            width: 465px;
+            margin-left: -1px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ads {
+            font-size: 15px;
+            width: 300px;
+            margin-left: 2px;
+            position: absolute;
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .E-posta {
+
+            border-radius: 7px;
+            width: 465px;
+            margin-left: -1px;
+        }
+
+        .Vergi-Numarası {
+            border-radius: 7px;
+            width: 467px;
+            margin-left: -2px;
+        }
+
+        .il {
+            border-radius: 7px;
+            width: 465px;
+            margin-left: -1px;
+        }
+
+        .ilçe {
+            border-radius: 7px;
+            width: 465px;
+            margin-left: -1px;
+        }
+
+        .sifre {
+            border-radius: 7px;
+            width: 467px;
+            margin-left: -1px;
+        }
+
+        .Kurum-Tabela-Adı {
+            border-radius: 7px;
+            width: 467px;
+        }
+
+        .kurumKase {
+            border-radius: 7px;
+            width: 467px;
+        }
+
+        .vergiDairesi {
+            border-radius: 7px;
+            width: 465px;
+            margin-left: -1px;
+        }
+
+        .Şifre-Tekrar {
+            border-radius: 7px;
+            width: 467px;
+        }
+
+        .onaykodum {
+            margin-left: -300px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .allofthem {
+            border: 2px solid black;
+            border-radius: 20px;
+            position: relative;
+            display: block;
+            margin: 150px;
+            padding: -150px;
+            /* overflow: hidden; */
+            border-left: -25px;
+        }
+
+        .E-Posta {
+            font-size: 20x;
+            width: 300px;
+            position: relative;
+            margin-left: 5px;
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="emkotechlogo.png" class="imglogo" width="200" height="100" alt="Web Sitesi Logosu" />
+
+    <div class="allofthem">
+        <h2 class="uyeoltıtle">Üye Ol</h2>
+        <div class="bordertologinpage">
+
+
+            <form class="uyeOlForm" onsubmit="return validateForm()">
+                <label for="adi-soyadı"> <span class="ads">Adı Soyadı:</span></label>
+                <input type="text" class="adi-soyadı" name="adısoyadı" required>
+
+                <label for="E-posta"> <span class="ads">E-posta:</span></label>
+                <input type="text" class="E-posta" name="kurumKase" placeholder="kurumsal@xxxokulları.xxx.tr">
+
+
+
+                <label for="vergiDairesi"> <span class="ads">Vergi Dairesi:</span></label>
+                <input type="text" class="vergiDairesi" name="vergiDairesi" required>
+                <label for="Vergi-Numarası"> <span class="ads">Vergi Numarası:</span></label>
+                <input type="text" class="Vergi-Numarası" name="Vergi-Numarası" required>
+                <label for="il"> <span class="ads">İl:</span></label>
+                <input type="il" class="il" name="il" required>
+                <label for="ilçe"><span class="ads">İlçe:</span></label>
+                <input type="text" class="ilçe" name="ilçe" required>
+
+        </div>
+        </form>
+        <div class="divpart2">
+            <!-- <form class="uyeOlForm" onsubmit="return validateForm()"> -->
+
+
+            <label for="telefon"><span class="ads">Telefon:</span></label>
+            <input type="tel" class="telefon" name="telefon" required placeholder="(531)xxxxxxxx">
+
+            <label for="unvan"><span class="ads">Ünvan:</span></label>
+            <input type="text" class="unvan" name="unvan" required placeholder="Kurumdaki Göreviniz">
+            <label for="sifre"><span class="ads">Şifre:</span></label>
+            <input type="password" class="sifre" name="sifre" required>
+            <label for="sifre-Tekrar"> <span class="ads">Şifre Tekrar:</span></label>
+            <input type="Şifre-Tekrar" class="Şifre-Tekrar" name="Şifre-Tekrar" required>
+            <label for="il"> <span class="ads">Kurum Tabela Adı:</span></label>
+            <input type="text" class="Kurum-Tabela-Adı" name="Kurum-Tabela-Adı" required>
+            <label for="kurumKase"> <span class="ads">Kurum Kaşe:</span></label>
+            <input type="text" class="kurumKase" name="kurumKase" required>
+
+            <label for="Onay-Kodu" class="onaykodum"> <span class="ads">Onay Kodu:</span></label>
+            <input type="text" class="Onay-Kodu" name="Onay-Kodu" required
+                placeholder="E-Posta adresinize gelen 6 haneli kodu giriniz">
+
+
+            <br>
+            <button type="submit" class="üyeol">Üye Ol</button>
+
+        </div>
+
+        </form>
+    </div>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
